@@ -10,7 +10,7 @@ class Memory extends StatefulWidget {
 }
 
 class _MemoryState extends State<Memory> {
-  final player = AudioCache();
+  final player = AudioPlayer();
   GameLogic _gameLogic = GameLogic();
   int tries = 0;
   int score = 0;
@@ -100,10 +100,10 @@ class _MemoryState extends State<Memory> {
                             _gameLogic.matchCheck[0].keys.first !=
                                 _gameLogic.matchCheck[1].keys.first) {
                           score += 100;
-                          player.load("voices/correct.mp3");
+                          player.play(AssetSource("voices/correct.mp3"));
                           _gameLogic.matchCheck.clear();
                         } else {
-                          player.load("voices/wrong.mp3");
+                          player.play(AssetSource("voices/wrong.mp3"));
 
                           Future.delayed(Duration(milliseconds: 500), () {
                             setState(() {
@@ -120,7 +120,7 @@ class _MemoryState extends State<Memory> {
                         if (!_gameLogic.gameImg
                                 .contains("assets/games/memo/hidden.png") &&
                             score >= 400) {
-                          player.load("voices/winner.mp3");
+                          player.play(AssetSource("voices/winner.mp3"));
                           Future.delayed(
                             Duration(seconds: 4),
                             () {

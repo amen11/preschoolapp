@@ -24,7 +24,7 @@ class ModelStyle extends StatefulWidget {
 class _ModelStyleState extends State<ModelStyle> {
   final FlutterTts flutterTts = FlutterTts();
   bool flag = false;
-  final player = AudioCache();
+  final player = AudioPlayer();
 
   @override
   Widget build(BuildContext context) {
@@ -111,7 +111,7 @@ class _ModelStyleState extends State<ModelStyle> {
                           ),
                           InkWell(
                             onTap: () {
-                              player.load(this.widget.cardModel.voice);
+                              player.play(AssetSource(widget.cardModel.voice));
                             },
                             child: Container(
                               height: 65,

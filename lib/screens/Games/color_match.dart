@@ -9,7 +9,7 @@ class ColorMatch extends StatefulWidget {
 }
 
 class _ColorMatchState extends State<ColorMatch> {
-  final player = AudioCache();
+  final player = AudioPlayer();
   final Map<String, bool> score = {};
   final Map choices = {
     '🍏': Colors.green,
@@ -118,9 +118,9 @@ class _ColorMatchState extends State<ColorMatch> {
           setState(
             () {
               score[emoji] = true;
-              player.load("voices/correct.mp3");
+              player.play(AssetSource("voices/correct.mp3"));
               if (score.length == 6) {
-                player.load("voices/winner.mp3");
+                player.play(AssetSource("voices/winner.mp3"));
                 Future.delayed(
                   Duration(seconds: 4),
                   () {
