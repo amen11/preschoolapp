@@ -140,11 +140,13 @@ const routesList = [
 const GamesList = [
   {'GameName': 'وصلة', 'imagePath': 'assets/games/color.png'},
   {'GameName': 'ميمو', 'imagePath': 'assets/games/memo.png'},
+  {'GameName': 'الألغاز','imagePath': 'assets/games/puzzle.png'},
 ];
 
 const gamesRoutes = [
   {'routePath': '/Color'},
   {'routePath': '/Memory'},
+  {'routePath': '/Puzzle'},
 ];
 
 //NUMS LIST
