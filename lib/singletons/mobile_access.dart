@@ -12,16 +12,7 @@ import 'package:project_v1/helpers/myNavigator.dart';
 import 'package:project_v1/statics/function.dart';
 
 String type = "mobile";
-// class PlatformMobile {
-//   static loadImage(pngBytes) async {
-//     var img = await loadImage("images/puzzle-images.png");
-//     var byteData = await img.toByteData(format: ImageByteFormat.rawUnmodified);
-//     var pngBytes = byteData!.buffer.asUint8List();
-//     return decodeImage(pngBytes);
-//   }
 
-//   static decodeImage(Uint8List pngBytes) => image.decodeImage(pngBytes);
-// }
 // The background
 SendPort? uiSendPort;
 final ReceivePort port = ReceivePort();
@@ -39,9 +30,7 @@ Future<image.Image?> renderImage(assetPath, {Size? size}) async {
 decodeImage(Uint8List pngBytes) => image.decodeImage(pngBytes);
 
 Future<ui.Image> loadImage(imageString, Size? size) async {
-  // Image(image: AssetImage(imageString)).
   ByteData bd = await rootBundle.load(imageString);
-  // ByteData bd = await rootBundle.load("graphics/bar-1920×1080.jpg");
   final Uint8List bytes = Uint8List.view(bd.buffer);
   final ui.Codec? codec;
   if (size != null) {
@@ -54,7 +43,6 @@ Future<ui.Image> loadImage(imageString, Size? size) async {
   final ui.Image image = (await codec.getNextFrame()).image;
 
   return image;
-  // setState(() => imageStateVarible = image);
 }
 
 cropPuzzle(img, context, Widget target) {
@@ -80,6 +68,3 @@ cropPuzzle(img, context, Widget target) {
     
 
 
-    
-    // uiSendPort ??= IsolateNameServer.lookupPortByName("fcmBackground");
-    // uiSendPort?.send(true);

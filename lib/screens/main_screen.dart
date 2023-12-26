@@ -22,14 +22,7 @@ class _MainScreenState extends State<MainScreen> {
               SizedBox(height: ScreenSize(context).height * 0.025),
               buildCards(context),
               games(),
-              // Container(
-              //   height: 120,
-              //   width: ScreenSize(context).width,
-              //   child: Align(
-              //     alignment: Alignment.bottomCenter,
-              //     child: Image.asset("assets/mainFooter.png"),
-              //   ),
-              // )
+           
             ],
           ),
         ),

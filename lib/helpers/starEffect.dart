@@ -37,17 +37,11 @@ class _StarEffectState extends State<StarEffect>
       }).toList();
 
       starsNotifier.notifyListeners();
-      // value = (animStar.value - 0.5) / 0.5 * 1;
-      // }
+     
     });
 
-    // animControlStar.addStatusListener((status) {
-    //   if (status == AnimationStatus.dismissed) {
-    //     animControlStar.repeat();
-    //   }
-    // });
+   
 
-    // animate(0);
     WidgetsBinding.instance?.addPostFrameCallback((_) => generateStars());
   }
 
@@ -77,9 +71,7 @@ class _StarEffectState extends State<StarEffect>
                       child: AnimatedScale(
                         duration: const Duration(milliseconds: 500),
                         scale: star.scale,
-                        // child: AnimatedRotation(
-                        //   duration: const Duration(milliseconds: 500),
-                        //   turns: star.degree * 2 * pi,
+                       
                         child: Opacity(
                           opacity: star.opacity,
                           child: const Icon(Icons.star, color: Colors.white),

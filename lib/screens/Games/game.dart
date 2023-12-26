@@ -42,11 +42,7 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
   CarouselController buttonCarouselController = CarouselController();
   ValueNotifier<int> sourceIndexNotifier = ValueNotifier<int>(1);
 
-  // Size? size;
-
-  // double? min;
-  // double? resizeScale;
-  // Axis? axis;
+  
 
   @override
   void dispose() {
@@ -67,7 +63,6 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
     initiateProcess();
     initiateAnimations();
 
-    // WidgetsBinding.instance?.addPostFrameCallback((_) => initiateProcess());
     // TODO: implement initState
     super.initState();
   }
@@ -110,13 +105,11 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                   children: [
                     Expanded(
                       child: Container(
-                        // color: Colors.yellow,
                         child: Flex(
                           clipBehavior: Clip.antiAlias,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          // crossAxisAlignment: WrapCrossAlignment.center,
-                          // alignment: WrapAlignment.spaceBetween,
+                         
                           direction: axis,
                           children: [
                             leftTab(resizeScale, axis, axisChild1),
@@ -137,7 +130,6 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                                     return Container(
                                       clipBehavior: Clip.antiAlias,
                                       decoration: BoxDecoration(
-                                        // color: Colors.red,
                                         shape: BoxShape.circle,
                                       ),
                                       alignment: Alignment.center,
@@ -146,35 +138,7 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                                       child: Stack(
                                         fit: StackFit.passthrough,
                                         children: [
-                                          // Positioned(
-                                          //   left: 0,
-                                          //   bottom: 0,
-                                          //   right: 0,
-                                          //   top: 0,
-                                          //   child: listenerValueTotalSplit(
-                                          //     builder: (context, child, value) {
-                                          //       return SleekCircularSlider(
-                                          //         initialValue: value,
-                                          //         appearance:
-                                          //             CircularSliderAppearance(
-                                          //           size: 60,
-                                          //         ),
-                                          //         min: 3,
-                                          //         max: 6,
-                                          //         onChangeEnd: (value) {
-                                          //           totalSplitNotifier.value =
-                                          //               value.toInt();
-                                          //           totalSplitNotifier
-                                          //               .notifyListeners();
-                                          //           key.currentState!
-                                          //               .updateTotalSplit(
-                                          //                   value.toInt());
-                                          //         },
-                                          //         onChange: (double value) {},
-                                          //       );
-                                          //     },
-                                          //   ),
-                                          // ),
+                                         
                                           Container(
                                             clipBehavior: Clip.antiAlias,
                                             decoration: BoxDecoration(
@@ -229,7 +193,6 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                                                     animation: animation,
                                                     builder: (context,
                                                         childAnimated) {
-                                                      // print("value $value - ${animation.value}");
                                                       return Transform.scale(
                                                         scale: animation.value,
                                                         child: childAnimated,
@@ -333,11 +296,9 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                     toggleSize: 80 * resizeScale,
                     inactiveIcon: Image.asset(
                       "assets/images/move.png",
-                      // width: 140 * resizeScale,
                     ),
                     activeIcon: Image.asset(
                       "assets/images/rotate.png",
-                      // width: 140 * resizeScale,
                     ),
                     onToggle: (status) {
                       actionNotifier.value =
@@ -366,92 +327,20 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
       flex: 1,
       child: Container(
         padding: EdgeInsets.all(20 * resizeScale),
-        // constraints: BoxConstraints(minWidth: 100),
         child: Flex(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,
           direction: axis,
           children: [
-            // Flex(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   crossAxisAlignment: CrossAxisAlignment.center,
-            //   direction: axisChild,
-            //   children: [
-            //     ElevatedButton(
-            //         child: FontHelper("Test ${_puzzleSource.image!.width}",
-            //             tapCallback: () => key.currentState!.initiateGame()),
-            //         onPressed: () => {}),
-            //     listenerValueTotalSplit(
-            //       builder: (context, child, value) {
-            //         return DropdownButton<int>(
-            //             value: value,
-            //             items: List.generate(
-            //                 4,
-            //                 (index) => DropdownMenuItem(
-            //                       child: FontHelper(
-            //                         "${index + 3}",
-            //                         color: Colors.white,
-            //                       ),
-            //                       value: index + 3,
-            //                     )),
-            //             onChanged: (val) {
-            //               // print("val $val");
-            //               totalSplitNotifier.value = val!;
-            //               totalSplitNotifier.notifyListeners();
-            //               key.currentState!.updateTotalSplit(val);
-            //             });
-            //         // return Slider(
-            //         //   min: 3,
-            //         //   max: 6,
-            //         //   value: value.toDouble(),
-            //         //   onChangeStart: (a) => key.currentState!.initiateGame(),
-            //         //   onChangeEnd: (a) {
-            //         //     key.currentState!.updateTotalSplit(a.toInt());
-            //         //   },
-            //         //   onChanged: (val) {
-            //         //     // print("val $val");
-            //         //     totalSplitNotifier.value = val.toInt();
-            //         //     totalSplitNotifier.notifyListeners();
-            //         //   },
-            //         // );
-            //       },
-            //     ),
-            //     listenerValueIndexImage(
-            //       builder: (context, child, value) {
-            //         print("value $value");
-            //         return DropdownButton<int>(
-            //             value: value,
-            //             items: List.generate(
-            //               DataManager.puzzleSources!.length,
-            //               (index) => DropdownMenuItem(
-            //                 child: FontHelper(
-            //                   "${index + 1}",
-            //                   color: Colors.white,
-            //                 ),
-            //                 value: index + 1,
-            //               ),
-            //             ).toList(),
-            //             onChanged: (val) {
-            //               // print("val $val");
-            // sourceIndexNotifier.value = val!;
-            // sourceIndexNotifier.notifyListeners();
-            // changePuzzleSource();
-            // key.currentState!.updatePuzzleSource(_puzzleSource);
-            //             });
-            //       },
-            //     ),
-            //   ],
-            // ),
+        
             Container(
               width: (axis == Axis.horizontal ? 150 : size.width / 3 * 2),
               height: (axis == Axis.horizontal ? size.height / 3 * 2 : 150),
-              // height: double.maxFinite,
               child: CarouselSlider(
                 carouselController: buttonCarouselController,
                 options: CarouselOptions(
                     initialPage: 0,
                     aspectRatio: 1,
-                    // height: 200 * resizeScale,
                     viewportFraction: .4,
                     scrollDirection: axisChild,
                     enlargeCenterPage: true,
@@ -481,7 +370,6 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
       flex: 1,
       child: Container(
         padding: EdgeInsets.all(20 * resizeScale),
-        // constraints: BoxConstraints(minWidth: 200 * resizeScale),
         child: Flex(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,

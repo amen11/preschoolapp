@@ -103,21 +103,7 @@ class PlanetObj {
   }
 }
 
-// class EnemyPlace {
-//   double percentPoint;
-//   String name;
-//   String assetPath;
-//   bool show = false;
-//   bool complete = false;
-//   Offset? offset;
 
-//   EnemyPlace(this.percentPoint, this.name, this.assetPath);
-
-//   bool get isComplete => complete;
-//   setOffset(Offset offset) => this.offset = offset;
-//   setShow(bool show) => this.show = show;
-//   setComplete(bool complete) => this.complete = complete;
-// }
 
 class EnemyPlace {
   double percentPoint;
@@ -153,9 +139,7 @@ class EnemyPlace {
   }
 
   List<Image> getImageCrop(double resizeScale, {int totalRowCol = 4}) {
-    // var la = List<Uint8List>.from(
-    //     StaticFunc.buildCropImages(image!, totalRowCol, returnDataList: true));
-    // return la;
+    
     return List<Image>.from(StaticFunc.buildCropImages(image!, totalRowCol));
   }
 
@@ -204,12 +188,7 @@ class Star {
       offset = Offset(math.Random().nextDouble(), math.Random().nextDouble());
     }
 
-    // if (tempOpacity > 1 || tempOpacity < 0) {
-    //   opacity = tempOpacity > 1 ? 1 : 0;
-    //   opacityType = !opacityType;
-    // } else {
-    //   opacity = tempOpacity;
-    // }
+   
   }
 }
 

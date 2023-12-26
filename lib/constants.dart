@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:audioplayers/audioplayers.dart';
 
 //RESPONSIVE SCREENS
 class ScreenSize {
@@ -12,20 +11,6 @@ class ScreenSize {
   double get height => MediaQuery.of(context).size.height;
 }
 
-// //USED COLORS
-// class AppColors {
-//   static const white = Color(0xffEEEEEE);
-//   static const black = Color(0xff1e212d);
-//   static const backGround = Color(0xff87C7F1);
-//   static const yellow = Color(0xff8FDDE7);
-//   //  static const secondary = Color(0xff8eecf5);
-//   static const crimson = Color(0xffEACFFF);
-//   static const secondary = Color(0xffdaf2dc);
-//   static const orange = Color(0xffffab4c);
-//   static const Lpink = Color(0xffffcce7);
-//   static const sage = Color(0xffdaf2dc);
-//   static const tale = Color(0xffdaf2dc);
-// }
 
 //USED COLORS
 class AppColors {

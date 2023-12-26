@@ -61,7 +61,6 @@ class _ModelStyleState extends State<ModelStyle> {
                       ),
                       child: InkWell(
                         onTap: () {
-                          // Music().volDown();
                           flutterTts.setLanguage("ar-EG");
                           flutterTts.speak(widget.cardModel.title);
                           flutterTts.setPitch(1);
@@ -82,9 +81,7 @@ class _ModelStyleState extends State<ModelStyle> {
                                 .first);
                             flutterTts.setPitch(1);
                           });
-                          // Future.delayed(Duration(milliseconds: 1300), () {
-                          //   Music().volUp();
-                          // });
+                        
                         },
                         child: Container(
                           height: 175,
