@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_v1/constants.dart';
 import 'package:project_v1/screens/Games/memory.dart';
+import 'package:project_v1/screens/Games/startup.dart';
 import 'package:project_v1/screens/animals_screen.dart';
 import 'package:project_v1/screens/family_screen.dart';
 import 'package:project_v1/screens/splash_screen.dart';
@@ -12,6 +13,9 @@ import 'package:project_v1/screens/Games/color_match.dart';
 import 'package:project_v1/screens/games_screen.dart';
 import 'package:project_v1/screens/fruits_screen.dart';
 import 'package:project_v1/screens/vegetables_screen.dart';
+import 'package:provider/provider.dart';
+
+import 'generalNotifier.dart';
 
 void main() {
   //WidgetsFlutterBinding.ensureInitialized();
@@ -28,23 +32,29 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Kiddo',
-      theme: ThemeData(scaffoldBackgroundColor: AppColors.backGround),
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => SplashScreen(),
-        '/Main': (context) => MainScreen(),
-        '/Nums': (context) => NumsScreen(),
-        '/Animals': (context) => AnimalScreen(),
-        '/Letters': (context) => LettersScreen(),
-        '/Family': (context) => FamilyScreen(),
-        '/Games': (context) => GameScreen(),
-        '/Color': (context) => ColorMatch(),
-        '/Memory': (context) => Memory(),
-        '/Fruits': (context) => Fruits(),
-        '/Vegetables': (context) => Vegetables(),
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => GeneralNotifier()),
+      ],
+      child: MaterialApp(
+        title: 'Kiddo',
+        theme: ThemeData(scaffoldBackgroundColor: AppColors.backGround),
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/': (context) => SplashScreen(),
+          '/Main': (context) => MainScreen(),
+          '/Nums': (context) => NumsScreen(),
+          '/Animals': (context) => AnimalScreen(),
+          '/Letters': (context) => LettersScreen(),
+          '/Family': (context) => FamilyScreen(),
+          '/Games': (context) => GameScreen(),
+          '/Color': (context) => ColorMatch(),
+          '/Memory': (context) => Memory(),
+          '/Fruits': (context) => Fruits(),
+          '/Vegetables': (context) => Vegetables(),
+          '/StartupPage': (context) => StartupPage(),
+        },
+      ),
     );
   }
 }

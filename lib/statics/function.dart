@@ -40,10 +40,9 @@ class StaticFunc {
         width: fullImage.width,
         x: (offset.dx + (padding)).round(),
         y:  (offset.dy + (padding)).round(),
-      
 
      /*  fullImage,
-      
+
       (offset.dx + (padding)).round(),
       (offset.dy + (padding)).round(),
       (size.width - (padding * 2)).round(),
