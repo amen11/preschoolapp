@@ -81,7 +81,7 @@ class _StartupPageState extends State<StartupPage> {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 15),
                             child: FontHelper(
-                              "Shidi Studio",
+                              "Little Minds",
                               color: Color.fromARGB(255, 247, 119, 0),
                               sizeText: 35 * resizeScale,
                               fontFamily: FontClass.Random,
