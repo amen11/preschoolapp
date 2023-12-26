@@ -38,9 +38,12 @@ Future<image.Image?> renderImage(String assetPath, {Size? size}) async {
   );
 
   var myImage = image.Image.fromBytes(
-    rgbaData.width,
-    rgbaData.height,
-    Uint8List.fromList(rgbaData.data),
+    width: rgbaData.width,
+    height: rgbaData.height,
+    bytes: Uint8List.fromList(rgbaData.data).buffer,
+   // 
+   // 
+    //
   );
 
   return myImage;

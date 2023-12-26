@@ -35,11 +35,19 @@ class StaticFunc {
     // if (widget.imageBckGround = null && this.fullImage != null)
 
       tempCrop = image_plugin.copyCrop(
-      fullImage,
+        fullImage,
+        height: fullImage.height,
+        width: fullImage.width,
+        x: (offset.dx + (padding)).round(),
+        y:  (offset.dy + (padding)).round(),
+      
+
+     /*  fullImage,
+      
       (offset.dx + (padding)).round(),
       (offset.dy + (padding)).round(),
       (size.width - (padding * 2)).round(),
-      (size.height - (padding * 2)).round(),
+      (size.height - (padding * 2)).round(), */
     );
 
     if (returnImageData) {

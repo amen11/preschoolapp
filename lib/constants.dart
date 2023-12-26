@@ -146,7 +146,7 @@ const GamesList = [
 const gamesRoutes = [
   {'routePath': '/Color'},
   {'routePath': '/Memory'},
-  {'routePath': '/Puzzle'},
+  {'routePath': '/Game'},
 ];
 
 //NUMS LIST
