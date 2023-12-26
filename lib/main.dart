@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => GeneralNotifier()),
       ],
       child: MaterialApp(
-        title: 'Kiddo',
+        title: 'PreschoolApp',
         theme: ThemeData(scaffoldBackgroundColor: AppColors.backGround),
         debugShowCheckedModeBanner: false,
         routes: {
