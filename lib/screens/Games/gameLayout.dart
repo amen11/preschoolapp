@@ -59,11 +59,7 @@ class _GameLayoutState extends State<GameLayout>
     _controllerCenter =
         ConfettiController(duration: const Duration(seconds: 10));
 
-    // _controllerCenter.addListener(
-    //   () {
-    //     _controllerCenter.
-    //   },
-    // );
+   
     initiateAnimations();
 
     // TODO: implement initState
@@ -127,17 +123,7 @@ class _GameLayoutState extends State<GameLayout>
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      // drawer: Drawer(),
-      // InkWell(
-      //             onTap: () => generalNotifier.setMenuIndex(mainMenu.index),
-      //             child: FontHelper(
-      //               "${mainMenu.text}",
-      //               color: context.read<GeneralNotifier>().getMenuIndex ==
-      //                       mainMenu.index
-      //                   ? Colors.red
-      //                   : Colors.white,
-      //             ),
-      //           )
+      
       appBar: appBar,
       body: StarEffect(
         child: Column(
@@ -192,10 +178,7 @@ class _GameLayoutState extends State<GameLayout>
                                     : CrossAxisAlignment.center,
                                 direction: Axis.vertical,
                                 children: [
-                                  // FontHelper(
-                                  //   "${generalNotifier.getMenuIndex} ${constraints.biggest.aspectRatio}",
-                                  //   color: Colors.white,
-                                  // ),
+                                 
                                   Flexible(
                                     child: FontHelper(
                                       "${infoGame.title}",
@@ -234,7 +217,6 @@ class _GameLayoutState extends State<GameLayout>
                             }),
                           ),
                           Container(
-                            // color: Colors.red,
                             margin: EdgeInsets.all(5 * resizeScale),
                             constraints: BoxConstraints.tight(Size.square(
                                 sizeMaxGame.longestSide -
@@ -296,13 +278,7 @@ class _GameLayoutState extends State<GameLayout>
                                     );
                                   },
                                 ),
-                                // getPuzzleIndexNotifier(
-                                //   child: gameWidget,
-                                //   builder: (context, child, index) {
-                                //     print("index $index");
-                                //     return child!;
-                                //   },
-                                // ),
+                                
                                 Align(
                                   alignment: Alignment.topCenter,
                                   child: ConfettiWidget(
@@ -327,17 +303,13 @@ class _GameLayoutState extends State<GameLayout>
                           ),
                           Flexible(
                             child: Container(
-                              // constraints: BoxConstraints.tight(minSizeSide),
-                              // color: Colors.blue,
+                             
                               child: Flex(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 direction: axis,
                                 children: [
-                                  // FontHelper(
-                                  //   "${generalNotifier.getMenuIndex} ${constraints.biggest.aspectRatio}",
-                                  //   color: Colors.white,
-                                  // ),
+                                 
                                   getMainMenuNotifier(
                                       builder: (context, menuChild, menuIndex) {
                                     return AnimatedScale(
@@ -389,17 +361,7 @@ class _GameLayoutState extends State<GameLayout>
                               ),
                             ),
                           ),
-                          // getPuzzleIndexNotifier(
-                          //   builder: (context, child, index) {
-                          //     return Slider(
-                          //       value: index,
-                          //       min: 0,
-                          //       onChanged: (value) => updatePuzzleIndex(value.toInt()),
-                          //       max: (DataManager.puzzleSources!.length - 1).toDouble(),
-                          //       // onChangeEnd: (value) => ,
-                          //     );
-                          //   },
-                          // )
+                        
                         ],
                       );
                     }),
@@ -408,8 +370,7 @@ class _GameLayoutState extends State<GameLayout>
               ),
             ),
             Container(
-              // height: 50,
-              // color: Colors.red,
+             
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   return Row(
@@ -454,80 +415,7 @@ class _GameLayoutState extends State<GameLayout>
                 },
               ),
 
-// child: getTotalSplitNotifier(
-//                                           builder: (context, child, value) {
-//                                             return GridView.builder(
-//                                               scrollDirection: Axis.horizontal,
-//                                               gridDelegate:
-//                                                   const SliverGridDelegateWithFixedCrossAxisCount(
-//                                                 crossAxisCount: 2,
-//                                                 childAspectRatio: 1,
-//                                                 crossAxisSpacing: 2,
-//                                                 mainAxisSpacing: 2,
-//                                               ),
-//                                               shrinkWrap: true,
-//                                               physics: ScrollPhysics(),
-//                                               itemCount: 4,
-//                                               itemBuilder:
-//                                                   (buildContext, index) {
-//                                                 return Container(
-//                                                   color: Colors.red,
-//                                                   child: GridView.builder(
-//                                                     scrollDirection:
-//                                                         Axis.horizontal,
-//                                                     gridDelegate:
-//                                                         SliverGridDelegateWithFixedCrossAxisCount(
-//                                                       crossAxisCount:
-//                                                           value.toInt(),
-//                                                       childAspectRatio: 1,
-//                                                       crossAxisSpacing: 1,
-//                                                       mainAxisSpacing: 1,
-//                                                     ),
-//                                                     shrinkWrap: true,
-//                                                     physics: ScrollPhysics(),
-//                                                     itemCount:
-//                                                         Math.pow(index + 3, 2)
-//                                                             .toInt(),
-//                                                     itemBuilder:
-//                                                         (buildContext, index) {
-//                                                       return Container(
-//                                                         color: Colors.red,
-//                                                       );
-//                                                     },
-//                                                   ),
-//                                                 );
-//                                               },
-//                                             );
-//                                           },
-//                                         ),
 
-              // width: double.maxFinite,
-              // child: Row(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              // children: [
-              //   getTotalSplitNotifier(
-              //       builder: (context, puzzleChild, puzzleIndex) {
-              //     return InkWell(
-              //       onTap: () {
-              //         showDialog(
-              //             context: context,
-              //             builder: (context) => SimpleDialog());
-              //       },
-              //     );
-              //   }),
-              //   getPuzzleIndexNotifier(
-              //       builder: (context, puzzleChild, puzzleIndex) {
-              //     return InkWell(
-              //       onTap: () {
-              //         showDialog(
-              //             context: context,
-              //             builder: (context) => SimpleDialog());
-              //       },
-              //     );
-              //   })
-              // ],
-              // ),
             )
           ],
         ),
@@ -672,11 +560,7 @@ class _GameLayoutState extends State<GameLayout>
       } else
         globalKey3.currentState?.initiateGame(false);
     }
-    // controller.animateToPage(
-    //   index,
-    //   duration: const Duration(milliseconds: 300),
-    //   curve: Curves.ease,
-    // );
+  
   }
 
   updatePuzzleIndex(int value) {
@@ -722,7 +606,6 @@ class _GameLayoutState extends State<GameLayout>
       size: sizeMaxGame,
       padding: 4 * resizeScale,
       hard: 0,
-      // durationPieceMove: Duration(milliseconds: 300),
       totalSplit: 3,
       counterCallback: (int counter) {},
       paddingOuter: resizeScale * 20,
@@ -736,7 +619,6 @@ class _GameLayoutState extends State<GameLayout>
       size: sizeMaxGame,
       hard: 1,
       padding: 4 * resizeScale,
-      // durationPieceMove: Duration(milliseconds: 300),
       totalSplit: 3,
       counterCallback: (int counter) {
         if (generalNotifier.getMenuIndex != 1) {
@@ -746,7 +628,6 @@ class _GameLayoutState extends State<GameLayout>
         animateCtrlCounter.reset();
         animateCtrlCounter.forward();
       },
-      // circleShape: true,
       paddingOuter: resizeScale * 20,
       successCallback: () => winFeedback(),
       moveCallback: (totalUnfinishTiles, move) => generalNotifier
@@ -758,7 +639,6 @@ class _GameLayoutState extends State<GameLayout>
       size: sizeMaxGame,
       padding: 4 * resizeScale,
       hard: 2,
-      // durationPieceMove: Duration(milliseconds: 300),
       totalSplit: 3,
       counterCallback: (int counter) {
         if (generalNotifier.getMenuIndex != 2) {
@@ -826,13 +706,10 @@ class _GameLayoutState extends State<GameLayout>
                             globalKey1.currentState?.initiateGame(false);
                             globalKey1.currentState?.randomPuzzle();
                           } else if (generalNotifier.getMenuIndex == 1) {
-                            // globalKey2.currentState!
-                            //     .updateTotalSplit(index + 3);
-
+                          
                             globalKey2.currentState?.initiateGame(false);
                           } else if (generalNotifier.getMenuIndex == 2) {
-                            // globalKey3.currentState!
-                            //     .updateTotalSplit(index + 3);
+                           
 
                             globalKey3.currentState?.initiateGame(false);
                           }
@@ -842,12 +719,10 @@ class _GameLayoutState extends State<GameLayout>
                           scale: value == (index + 3) ? .9 : 0.7,
                           child: Container(
                             margin: EdgeInsets.all(20 * resizeScale),
-                            // color: Colors.red,
                             child: Column(
                               children: [
                                 Expanded(
                                   child: Container(
-                                    // color: Colors.red,
                                     child: GridView.builder(
                                       scrollDirection: Axis.horizontal,
                                       gridDelegate:
@@ -925,21 +800,16 @@ class _GameLayoutState extends State<GameLayout>
                         onTap: () {
                           generalNotifier.setChoicePuzzleIndex(index);
 
-                          // generalNotifier.setCounterNotifier(-1);
-                          // generalNotifier.setInfoGameNotifier(
-                          //     title: "Puzzle Challenge!", move: 0, tiles: 0);
-                          // animateCtrlCounter.reset();
+                          
 
                           if (generalNotifier.getMenuIndex == 1) {
                             globalKey2.currentState!
                                 .updatePuzzleSource(puzzleSource);
 
-                            // globalKey3.currentState?.initiateGame(false);
                           } else if (generalNotifier.getMenuIndex == 2) {
                             globalKey3.currentState!
                                 .updatePuzzleSource(puzzleSource);
 
-                            // globalKey3.currentState?.initiateGame(false);
                           }
                         },
                         child: AnimatedScale(

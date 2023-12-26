@@ -93,10 +93,8 @@ class GameWidgetState_ extends State<GameWidget> {
   Widget build(BuildContext context) {
     var statusHeight = MediaQuery.of(context).viewPadding.top;
     size = widget.size;
-    // size = Size(size.width, size.height);
 
     updateData();
-    // updateViews();
     return ValueListenableBuilder(
       valueListenable: gameStatusNotifier,
       builder: (context, GameStatus gameStatus, child) {
@@ -160,20 +158,16 @@ class GameWidgetState_ extends State<GameWidget> {
     double ratio = widget.puzzleSource.image!.width.toDouble() /
         (minOuter + widget.padding * 2);
 
-    // size = MediaQuery.of(context).size;
-    // min = Math.min(size.width, size.height);
-    // resizeScale = (min > 800 ? 1 : min / 800 * 1);
+    
     if (startup) {
       image = StaticFunc.getCropImage(
         widget.puzzleSource.image!,
         offset: Offset((paddingOutCalc + widget.padding) * ratio,
             (paddingOutCalc + widget.padding) * ratio),
         size: Size.square((min) * ratio),
-        // targetSize: Size.square(min),
-        // size: Size.square(min),
+    
       );
     }
-    // image = StaticFunc.exportImageWidget(widget.puzzleSource.image!);
 
     if (splitOld != widget.totalSplit || startup) {
       if (widget.hard != 0) {
@@ -190,7 +184,6 @@ class GameWidgetState_ extends State<GameWidget> {
         images = List<Image>.from(StaticFunc.buildCropImages(
           imageTemp,
           widget.totalSplit,
-          // targetSize: Size((min / widget.totalSplit), (min / widget.totalSplit)),
           padding: widget.padding,
         ));
       } else {
@@ -207,7 +200,6 @@ class GameWidgetState_ extends State<GameWidget> {
 
       setGameStatus(GameStatus.playing);
     }
-    // setState(() {});
   }
 
   void startGame() {
@@ -219,7 +211,6 @@ class GameWidgetState_ extends State<GameWidget> {
       count += 1;
 
       if (count <= 3) {
-        // randomPuzzle(true);
         widget.counterCallback?.call(4 - count);
         Future.delayed(const Duration(milliseconds: 500))
             .then((value) => randomPuzzle());
@@ -466,7 +457,6 @@ class GameWidgetState_ extends State<GameWidget> {
                         top: box.offset.dy,
                         child: Container(
                           padding: EdgeInsets.all(widget.padding),
-                          // color: Colors.red,
                           alignment: Alignment.center,
                           width: box.size!.width,
                           height: box.size!.height,
@@ -498,7 +488,6 @@ class GameWidgetState_ extends State<GameWidget> {
                                           child: Stack(
                                             fit: StackFit.expand,
                                             children: [
-                                              // puzzle.img!,
                                               if (box.img != null &&
                                                   widget.hard != 0) ...[
                                                 box.img!

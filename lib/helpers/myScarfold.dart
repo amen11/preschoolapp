@@ -36,11 +36,7 @@ class MyScaffold extends StatelessWidget {
                       "assets/images/back.png",
                       width: 140 * resizeScale,
                     ),
-                    // child: Icon(
-                    //   Icons.arrow_back,
-                    //   size: 40 * resizeScale,
-                    //   color: Colors.white,
-                    // ),
+                    
                   ),
                 ),
               )

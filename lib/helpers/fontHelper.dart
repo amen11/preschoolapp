@@ -85,111 +85,7 @@ class FontHelper extends StatefulWidget {
     if (fontClass == FontClass.Quinngothic) return "Quinngothic";
   }
 
-  // static Widget text(
-  //   String text, {
-  //   TextAlign align = TextAlign.left,
-  //   Color color = Colors.black87,
-  //   FontClass fontFamily = FontClass.None,
-  //   FontWeight fontWeight = FontWeight.w500,
-  //   Color? shadowColor,
-  //   Color? bgColor,
-  //   EdgeInsets? padding,
-  //   Offset? shadowOffset,
-  //   double blurRadius = 0.7,
-  //   double? sizeText,
-  //   TextOverflow overflow = TextOverflow.visible,
-  //   int? maxLines = null,
-  //   double letterSpacing = 1,
-  //   TextDecoration? decoration,
-  //   BorderRadius? borderRadius,
-  //   Border? border,
-  //   FontSize fontSizeEnum = FontSize.Content2,
-  //   Color strokeColor = Colors.white,
-  //   bool showStroke = false,
-  //   double strokePercent = 0.2,
-  //   Color? strokeColorTouch,
-  // }) {
-  //   borderRadius ??= BorderRadius.circular(2);
-  //   border ??= Border.all(width: 1);
-  //   shadowColor ??= Colors.white24;
-  //   shadowOffset ??= Offset(0, 1);
-  //   // if (shadowOffset == null) shadowOffset = Offset(0.7, 1.5);
-  //   decoration ??= TextDecoration.none;
-  //   padding ??= const EdgeInsets.symmetric(horizontal: 10, vertical: 5);
-  //   strokeColorTouch ??= strokeColor;
-
-  //   Widget widgetText = Text(
-  //     text,
-  //     textAlign: align,
-  //     maxLines: maxLines,
-  //     overflow: overflow,
-  //     style: TextStyle(
-  //       fontSize: sizeText ?? getSizeBaseEnum(fontSizeEnum),
-  //       letterSpacing: letterSpacing,
-  //       color: color,
-  //       fontFamily: FontHelper.getFontEnum(fontFamily),
-  //       fontWeight: fontWeight,
-  //       decoration: decoration,
-  //       wordSpacing: -1,
-  //     ),
-  //   );
-
-  //   Widget widgetTextStroke = Text(
-  //     text,
-  //     textAlign: align,
-  //     maxLines: maxLines,
-  //     overflow: overflow,
-  //     style: TextStyle(
-  //         foreground: Paint()
-  //           ..color = strokeColor
-  //           ..strokeJoin = StrokeJoin.round
-  //           ..strokeCap = StrokeCap.round
-  //           ..style = PaintingStyle.stroke
-  //           ..strokeWidth =
-  //               strokePercent * (sizeText ?? getSizeBaseEnum(fontSizeEnum)),
-  //         fontSize: sizeText ?? getSizeBaseEnum(fontSizeEnum),
-  //         letterSpacing: letterSpacing,
-  //         // color: color,
-  //         fontFamily: FontHelper.getFontEnum(fontFamily),
-  //         fontWeight: fontWeight,
-  //         decoration: decoration,
-  //         wordSpacing: -1,
-  //         // decorationThickness: 20,
-  //         shadows: [
-  //           Shadow(
-  //             blurRadius: blurRadius,
-  //             color: shadowColor,
-  //             offset: shadowOffset,
-  //           )
-  //         ]),
-  //   );
-
-  //   Widget strokeWidget = Stack(
-  //     children: [
-  //       Offstage(
-  //         offstage: !showStroke,
-  //         child: widgetTextStroke,
-  //       ),
-  //       widgetText
-  //     ],
-  //   );
-
-  //   return Material(
-  //     color: Colors.transparent,
-  //     child: bgColor == null
-  //         ? strokeWidget
-  //         : Container(
-  //             decoration: BoxDecoration(
-  //               color: bgColor,
-  //               border: border,
-  //               borderRadius: borderRadius,
-  //             ),
-  //             padding: padding,
-  //             child: strokeWidget,
-  //           ),
-  //   );
-  // }
-
+  
   static double getSizeBaseEnum(FontSize fontSizeEnum) {
     switch (fontSizeEnum) {
       case FontSize.Title:
@@ -246,12 +142,10 @@ class _FontHelperState extends State<FontHelper> {
         fontSize:
             widget.sizeText ?? FontHelper.getSizeBaseEnum(widget.fontSizeEnum),
         letterSpacing: widget.letterSpacing,
-        // color: color,
         fontFamily: FontHelper.getFontEnum(widget.fontFamily),
         fontWeight: widget.fontWeight,
         decoration: widget.decoration,
         wordSpacing: -1,
-        // decorationThickness: 20,
         shadows: [
           Shadow(
             blurRadius: widget.blurRadius,
@@ -310,9 +204,7 @@ class _FontHelperState extends State<FontHelper> {
       child: strokeWidget,
     );
 
-    // strokeWidget =
-    //     widget.effectTouchDuration != null ? strokeWidgetClick : strokeWidget;
-
+  
     return AnimatedScale(
       duration: widget.effectTouchDuration ??= const Duration(milliseconds: 0),
       curve: Curves.bounceIn,
@@ -320,15 +212,9 @@ class _FontHelperState extends State<FontHelper> {
       child: Material(
         color: Colors.transparent,
         child:
-            // widget.bgColor == null
-            //     ? Container(
-            //         padding: widget.padding,
-            //         child:
-            //             widget.tapCallback != null ? strokeWidgetClick : strokeWidget)
-            //     :
+           
             Container(
-          // width: widget.width,
-          // alignment: Alignment.center,
+          
           decoration: BoxDecoration(
             color: widget.bgColor,
             border: widget.border,
@@ -340,10 +226,6 @@ class _FontHelperState extends State<FontHelper> {
       ),
     );
 
-    // return GestureDetector(
-    //   onTapUp: (d) => widget.onTouchCall.call(false),
-    //   onTap: () => widget.onTouchCall.call(true),
-    //   child: widget.child,
-    // );
+   
   }
 }

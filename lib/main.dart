@@ -49,12 +49,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class MusicHandler extends WidgetsBindingObserver {
-//   void didChangeAppLifecycleState(AppLifecycleState state) {
-//     if (state == AppLifecycleState.paused) {
-//       Music.music.pause();
-//     } else if (state == AppLifecycleState.resumed) {
-//       Music.music.resume();
-//     }
-//   }
-// }
