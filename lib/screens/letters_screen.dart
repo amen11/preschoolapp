@@ -22,7 +22,7 @@ class _LettersScreenState extends State<LettersScreen> {
           icon: Icon(Icons.arrow_back, color: AppColors.backGround),
         ),
         title:
-            Image.asset('assets/images/Logo_color.png', width: 65, height: 65),
+            Image.asset('assets/images/Logo_color.png', width: 120, height: 120),
       ),
       backgroundColor: AppColors.black,
       body: Center(

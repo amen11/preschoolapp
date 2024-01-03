@@ -57,20 +57,7 @@ class PrimaryText extends StatelessWidget {
   }
 }
 
-//BACKGROUND MUSIC CONTROLLER
-// class Music {
-//   static AudioPlayer music = AudioPlayer();
-//   static AudioCache player = AudioCache(fixedPlayer: music);
-//   void play() {
-//     player.loop("voices/music.mp3", volume: 0.85);
-//   }
-//   volDown() {
-//     music.setVolume(0.25);
-//   }
-//   volUp() {
-//     music.setVolume(0.85);
-//   }
-// }
+
 
 //CATEGORIES
 const CardsList = [

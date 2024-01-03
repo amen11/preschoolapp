@@ -18,14 +18,11 @@ import 'package:provider/provider.dart';
 import 'generalNotifier.dart';
 
 void main() {
-  //WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
-  // WidgetsBinding.instance!.addObserver(new MusicHandler());
   SystemChrome.setEnabledSystemUIMode(
     SystemUiMode.immersive,
   );
 
-  // Music().play();.
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 }
 
@@ -37,7 +34,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => GeneralNotifier()),
       ],
       child: MaterialApp(
-        title: 'PreschoolApp',
+        title: 'Little Minds',
         theme: ThemeData(scaffoldBackgroundColor: AppColors.backGround),
         debugShowCheckedModeBanner: false,
         routes: {

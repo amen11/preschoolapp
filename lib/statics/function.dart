@@ -32,7 +32,6 @@ class StaticFunc {
   }) {
     image_plugin.Image? tempCrop;
     size ??= Size(fullImage.width.toDouble(), fullImage.height.toDouble());
-    // if (widget.imageBckGround = null && this.fullImage != null)
 
       tempCrop = image_plugin.copyCrop(
         fullImage,
@@ -41,12 +40,7 @@ class StaticFunc {
         x: (offset.dx + (padding)).round(),
         y:  (offset.dy + (padding)).round(),
 
-     /*  fullImage,
-
-      (offset.dx + (padding)).round(),
-      (offset.dy + (padding)).round(),
-      (size.width - (padding * 2)).round(),
-      (size.height - (padding * 2)).round(), */
+    
     );
 
     if (returnImageData) {
@@ -70,12 +64,10 @@ class StaticFunc {
   }) {
     List<dynamic> puzzleImages = [];
     totalRender ??= pow(total, 2).toInt();
-    // List<Image> puzzleGalleries2 =
     List.generate(totalRender, (index) {
       Offset offset = Offset((img.width / total) * (index % total),
           (img.width / total) * (index ~/ total));
 
-      // print("object $img - $total - $totalGrid - $offset");
       puzzleImages.add(StaticFunc.getCropImage(img,
           returnDataList: returnDataList,
           offset: offset,
