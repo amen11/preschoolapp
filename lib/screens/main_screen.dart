@@ -22,7 +22,6 @@ class _MainScreenState extends State<MainScreen> {
               SizedBox(height: ScreenSize(context).height * 0.025),
               buildCards(context),
               games(),
-           
             ],
           ),
         ),
@@ -115,7 +114,7 @@ class _MainScreenState extends State<MainScreen> {
               width: 90,
               child: Image.asset(imagePath, fit: BoxFit.contain),
             ),
-            PrimaryText(text: name, fontWeight: FontWeight.w800, size: 16),
+            PrimaryText(text: name, fontWeight: FontWeight.w800, size: 14),
           ],
         ),
       ),
@@ -124,7 +123,7 @@ class _MainScreenState extends State<MainScreen> {
 
   SizedBox buildCards(BuildContext context) {
     return SizedBox(
-      height: 580,
+      height: 600,
       child: GridView.count(
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
