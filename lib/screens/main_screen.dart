@@ -86,6 +86,8 @@ class _MainScreenState extends State<MainScreen> {
         setState(
           () => {
             selectedCard = index,
+           print('routes list '),
+           print(routesList.length),
             Navigator.pushNamed(
                 context, routesList[index]['routePath'].toString())
           },
@@ -123,12 +125,13 @@ class _MainScreenState extends State<MainScreen> {
 
   SizedBox buildCards(BuildContext context) {
     return SizedBox(
-      height: 600,
+      height: 1000,
       child: GridView.count(
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
         children: List.generate(
           CardsList.length,
+          
           (index) => cardsStyle(CardsList[index]['imagePath'].toString(),
               CardsList[index]['name'].toString(), index),
         ),

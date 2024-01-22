@@ -11,7 +11,6 @@ class ScreenSize {
   double get height => MediaQuery.of(context).size.height;
 }
 
-
 //USED COLORS
 class AppColors {
   static const white = Color(0xffEEEEEE);
@@ -57,8 +56,6 @@ class PrimaryText extends StatelessWidget {
   }
 }
 
-
-
 //CATEGORIES
 const CardsList = [
   {
@@ -85,6 +82,22 @@ const CardsList = [
     'imagePath': 'assets/vegetables.png',
     'name': 'الخضراوات',
   },
+  {
+    'imagePath': 'assets/colors.jpg',
+    'name': 'الألوان',
+  },
+  {
+    'imagePath': 'assets/months.jpg',
+    'name': 'الأشهر',
+  },
+  {
+    'imagePath': 'assets/days.png',
+    'name': 'الأيام',
+  },
+  {
+    'imagePath': 'assets/countries.png',
+    'name': 'البلدان'
+  }
 ];
 
 //ROUTES
@@ -107,6 +120,18 @@ const routesList = [
   {
     'routePath': '/Vegetables',
   },
+  {
+    'routePath': '/Colors',
+  },
+  {
+    'routePath': '/Months',
+  },
+  {
+    'routePath': '/Days',
+  },
+  {
+    'routePath': '/Countries'
+  }
 ];
 
 const GamesList = [
@@ -120,6 +145,197 @@ const gamesRoutes = [
   {'routePath': '/Memory'},
   {'routePath': '/StartupPage'},
 ];
+
+
+//weekdays list 
+const weekdaysList = [
+  {
+    'imagePath': 'assets/weekdays/sunday.png',
+    'name': 'Sunday'
+  },
+  {
+    'imagePath': 'assets/weekdays/monday.png',
+    'name': 'Monday'
+  },
+  {
+    'imagePath': 'assets/weekdays/tuesday.png',
+    'name': 'Tuesday'
+  },
+  {
+    'imagePath': 'assets/weekdays/wednesday.png',
+    'name': 'Wednesday'
+  },
+  {
+    'imagePath': 'assets/weekdays/thursday.png',
+    'name': 'Thursday'
+  },
+  {
+    'imagePath': 'assets/weekdays/friday.png',
+    'name': 'Friday'
+  },
+  {
+    'imagePath': 'assets/weekdays/saturday.png',
+    'name': 'Saturday'
+  }
+];
+
+//months list 
+const monthsList = [
+  {
+    'imagePath': 'assets/months/january.png',
+    'name': 'January'
+  },
+  {
+    'imagePath': 'assets/months/february.png',
+    'name': 'February'
+  },
+  {
+    'imagePath': 'assets/months/march.png',
+    'name': 'March'
+  },
+  {
+    'imagePath': 'assets/months/april.png',
+    'name': 'April'
+  },
+  {
+    'imagePath': 'assets/months/may.png',
+    'name': 'May'
+  },
+  {
+    'imagePath': 'assets/months/june.png',
+    'name': 'June'
+  },
+  {
+    'imagePath': 'assets/months/july.png',
+    'name': 'July'
+  },
+  {
+    'imagePath': 'assets/months/august.png',
+    'name': 'August'
+  },
+  {
+    'imagePath': 'assets/months/september.png',
+    'name': 'September'
+  },
+  {
+    'imagePath': 'assets/months/october.png',
+    'name': 'October'
+  },
+  {
+    'imagePath': 'assets/months/november.png',
+    'name': 'November'
+  },
+  {
+    'imagePath': 'assets/months/december.png',
+    'name': 'December'
+  }
+];
+
+
+//colors List 
+const colorsList = [
+  {
+    'imagePath': 'assets/colors/red.png',
+    'name': 'Red'
+  },
+  {
+    'imagePath': 'assets/colors/blue.png',
+    'name': 'Blue'
+  },
+  {
+    'imagePath': 'assets/colors/green.png',
+    'name': 'Green'
+  },
+  {
+    'imagePath': 'assets/colors/yellow.png',
+    'name': 'Yellow'
+  },
+  {
+    'imagePath': 'assets/colors/orange.png',
+    'name': 'Orange'
+  },
+  {
+    'imagePath': 'assets/colors/purple.png',
+    'name': 'Purple'
+  },
+  {
+    'imagePath': 'assets/colors/pink.png',
+    'name': 'Pink'
+  },
+  {
+    'imagePath': 'assets/colors/brown.png',
+    'name': 'Brown'
+  },
+  {
+    'imagePath': 'assets/colors/gray.png',
+    'name': 'Gray'
+  },
+  {
+    'imagePath': 'assets/colors/black.png',
+    'name': 'Black'
+  },
+  {
+    'imagePath': 'assets/colors/white.png',
+    'name': 'White'
+  },
+  {
+    'imagePath': 'assets/colors/cyan.png',
+    'name': 'Cyan'
+  }
+];
+
+//countries list 
+const countriesList = [
+  {
+    'imagePath': 'assets/countries/usa.png',
+    'name': 'United States'
+  },
+  {
+    'imagePath': 'assets/countries/canada.png',
+    'name': 'Canada'
+  },
+  {
+    'imagePath': 'assets/countries/uk.png',
+    'name': 'United Kingdom'
+  },
+  {
+    'imagePath': 'assets/countries/france.png',
+    'name': 'France'
+  },
+  {
+    'imagePath': 'assets/countries/germany.png',
+    'name': 'Germany'
+  },
+  {
+    'imagePath': 'assets/countries/japan.png',
+    'name': 'Japan'
+  },
+  {
+    'imagePath': 'assets/countries/china.png',
+    'name': 'China'
+  },
+  {
+    'imagePath': 'assets/countries/india.png',
+    'name': 'India'
+  },
+  {
+    'imagePath': 'assets/countries/brazil.png',
+    'name': 'Brazil'
+  },
+  {
+    'imagePath': 'assets/countries/australia.png',
+    'name': 'Australia'
+  },
+  {
+    'imagePath': 'assets/countries/south-africa.png',
+    'name': 'South Africa'
+  },
+  {
+    'imagePath': 'assets/countries/russia.png',
+    'name': 'Russia'
+  }
+];
+
 
 //NUMS LIST
 const numsList = [

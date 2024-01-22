@@ -4,7 +4,10 @@ import 'package:project_v1/constants.dart';
 import 'package:project_v1/screens/Games/memory.dart';
 import 'package:project_v1/screens/Games/startup.dart';
 import 'package:project_v1/screens/animals_screen.dart';
+import 'package:project_v1/screens/colors_screen.dart';
+import 'package:project_v1/screens/days_screen.dart';
 import 'package:project_v1/screens/family_screen.dart';
+import 'package:project_v1/screens/months_screen.dart';
 import 'package:project_v1/screens/splash_screen.dart';
 import 'package:project_v1/screens/main_screen.dart';
 import 'package:project_v1/screens/nums_screen.dart';
@@ -44,6 +47,9 @@ class MyApp extends StatelessWidget {
           '/Animals': (context) => AnimalScreen(),
           '/Letters': (context) => LettersScreen(),
           '/Family': (context) => FamilyScreen(),
+          '/Colors':(context) => ColorsScreen(),
+          '/Months':(context) => MonthsScreen(),
+          '/Days':(context) => DaysScreen(),
           '/Games': (context) => GameScreen(),
           '/Color': (context) => ColorMatch(),
           '/Memory': (context) => Memory(),
