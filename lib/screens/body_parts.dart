@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:project_v1/constants.dart';
+import '../models/model_bodyparts.dart'; 
 
-import '../models/weekday_model.dart';
-
-class WeekdayModel {
-  String name, imagePath;
-  WeekdayModel({
-    required this.name,
-    required this.imagePath,
-  });
-}
-
-class WeekdaysScreen extends StatefulWidget {
+class BodyPartsScreen extends StatefulWidget {
   @override
-  _WeekdaysScreenState createState() => _WeekdaysScreenState();
+  _BodyPartsScreenState createState() => _BodyPartsScreenState();
 }
 
-class _WeekdaysScreenState extends State<WeekdaysScreen> {
+class _BodyPartsScreenState extends State<BodyPartsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,19 +25,19 @@ class _WeekdaysScreenState extends State<WeekdaysScreen> {
       ),
       backgroundColor: AppColors.black,
       body: Center(
-        child: buildWeekdays(),
+        child: buildBodyParts(),
       ),
     );
   }
 
-  Widget buildWeekdays() {
+  Widget buildBodyParts() {
     return ListView.builder(
-      itemCount: weekdaysList.length,
+      itemCount: bodyPartsList.length,
       itemBuilder: (context, index) {
-        return WeekdayModelWidget(
-          weekdayModel: WeekdayModel(
-            name: weekdaysList[index]['name'].toString(),
-            imagePath: weekdaysList[index]['imagePath'].toString(),
+        return BodyPartModelWidget(
+          bodyPartModel: BodyPartModel(
+            name: bodyPartsList[index]['name'].toString(),
+            image: bodyPartsList[index]['imagePath'].toString(),
           ),
         );
       },

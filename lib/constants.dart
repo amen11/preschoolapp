@@ -24,6 +24,9 @@ class AppColors {
   static const sage = Color(0xffdaf2dc);
   static const pale = Color(0xffeacfff);
   static const tale = Color(0xffdaf2dc);
+  static const skyblue = Color(0xFFB2BFD8);
+  static const PastelGreen = Color(0xFF77DD77);
+  static const pastelBlue = Color(0xFFADD8E6);
 }
 
 //FONT STYLING
@@ -94,9 +97,14 @@ const CardsList = [
     'imagePath': 'assets/days.png',
     'name': 'الأيام',
   },
+  {'imagePath': 'assets/countries.png', 'name': 'البلدان'},
   {
-    'imagePath': 'assets/countries.png',
-    'name': 'البلدان'
+    'imagePath': 'assets/body.jpg',
+    'name': 'أجزاء الجسم',
+  },
+  {
+    'imagePath': 'assets/body.jpg',
+    'name': 'الأشكال',
   }
 ];
 
@@ -129,9 +137,11 @@ const routesList = [
   {
     'routePath': '/Days',
   },
+  {'routePath': '/Countries'},
   {
-    'routePath': '/Countries'
-  }
+    'routePath': '/BodyParts',
+  },
+  {'routePath': '/Shapes'}
 ];
 
 const GamesList = [
@@ -146,196 +156,137 @@ const gamesRoutes = [
   {'routePath': '/StartupPage'},
 ];
 
-
-//weekdays list 
+//weekdays list
 const weekdaysList = [
-  {
-    'imagePath': 'assets/weekdays/sunday.png',
-    'name': 'Sunday'
-  },
-  {
-    'imagePath': 'assets/weekdays/monday.png',
-    'name': 'Monday'
-  },
-  {
-    'imagePath': 'assets/weekdays/tuesday.png',
-    'name': 'Tuesday'
-  },
-  {
-    'imagePath': 'assets/weekdays/wednesday.png',
-    'name': 'Wednesday'
-  },
-  {
-    'imagePath': 'assets/weekdays/thursday.png',
-    'name': 'Thursday'
-  },
-  {
-    'imagePath': 'assets/weekdays/friday.png',
-    'name': 'Friday'
-  },
-  {
-    'imagePath': 'assets/weekdays/saturday.png',
-    'name': 'Saturday'
-  }
+  {'imagePath': 'assets/weekdays/sunday.png', 'name': 'الأحد'},
+  {'imagePath': 'assets/weekdays/monday.png', 'name': 'الاثنين'},
+  {'imagePath': 'assets/weekdays/tuesday.png', 'name': 'الثلاثاء'},
+  {'imagePath': 'assets/weekdays/wednesday.png', 'name': 'الأربعاء'},
+  {'imagePath': 'assets/weekdays/thursday.png', 'name': 'الخميس'},
+  {'imagePath': 'assets/weekdays/friday.png', 'name': 'الجمعة'},
+  {'imagePath': 'assets/weekdays/saturday.png', 'name': 'السبت'}
 ];
 
-//months list 
+
+//months list
 const monthsList = [
-  {
-    'imagePath': 'assets/months/january.png',
-    'name': 'January'
-  },
-  {
-    'imagePath': 'assets/months/february.png',
-    'name': 'February'
-  },
-  {
-    'imagePath': 'assets/months/march.png',
-    'name': 'March'
-  },
-  {
-    'imagePath': 'assets/months/april.png',
-    'name': 'April'
-  },
-  {
-    'imagePath': 'assets/months/may.png',
-    'name': 'May'
-  },
-  {
-    'imagePath': 'assets/months/june.png',
-    'name': 'June'
-  },
-  {
-    'imagePath': 'assets/months/july.png',
-    'name': 'July'
-  },
-  {
-    'imagePath': 'assets/months/august.png',
-    'name': 'August'
-  },
-  {
-    'imagePath': 'assets/months/september.png',
-    'name': 'September'
-  },
-  {
-    'imagePath': 'assets/months/october.png',
-    'name': 'October'
-  },
-  {
-    'imagePath': 'assets/months/november.png',
-    'name': 'November'
-  },
-  {
-    'imagePath': 'assets/months/december.png',
-    'name': 'December'
-  }
+  {'imagePath': 'assets/months/january.png', 'name': 'جانْفِي'},
+  {'imagePath': 'assets/months/february.png', 'name': 'فِيفْرِي'},
+  {'imagePath': 'assets/months/march.png', 'name': 'مارْس'},
+  {'imagePath': 'assets/months/april.png', 'name': 'أفْرِيل'},
+  {'imagePath': 'assets/months/may.png', 'name': 'ماي'},
+  {'imagePath': 'assets/months/june.png', 'name': 'جْوان'},
+  {'imagePath': 'assets/months/july.png', 'name': 'جْوِيلِْية'},
+  {'imagePath': 'assets/months/august.png', 'name': 'أُوت'},
+  {'imagePath': 'assets/months/september.png', 'name': 'سِبْتُمْبر'},
+  {'imagePath': 'assets/months/october.png', 'name': 'أُكْتُوبر'},
+  {'imagePath': 'assets/months/november.png', 'name': 'نُوفُمْبر'},
+  {'imagePath': 'assets/months/december.png', 'name': 'دِيسُمْبر'}
 ];
 
-
-//colors List 
+//colors List
 const colorsList = [
   {
     'imagePath': 'assets/colors/red.png',
-    'name': 'Red'
+    'name': 'أحمر',
   },
   {
     'imagePath': 'assets/colors/blue.png',
-    'name': 'Blue'
+    'name': 'أزرق',
   },
   {
     'imagePath': 'assets/colors/green.png',
-    'name': 'Green'
+    'name': 'أخضر',
   },
   {
     'imagePath': 'assets/colors/yellow.png',
-    'name': 'Yellow'
+    'name': 'أصفر',
   },
   {
     'imagePath': 'assets/colors/orange.png',
-    'name': 'Orange'
+    'name': 'برتقالي',
   },
   {
     'imagePath': 'assets/colors/purple.png',
-    'name': 'Purple'
+    'name': 'أرجواني',
   },
   {
     'imagePath': 'assets/colors/pink.png',
-    'name': 'Pink'
+    'name': 'وردي',
   },
   {
     'imagePath': 'assets/colors/brown.png',
-    'name': 'Brown'
+    'name': 'بني',
   },
   {
     'imagePath': 'assets/colors/gray.png',
-    'name': 'Gray'
+    'name': 'رمادي',
   },
   {
     'imagePath': 'assets/colors/black.png',
-    'name': 'Black'
+    'name': 'أسود',
   },
   {
     'imagePath': 'assets/colors/white.png',
-    'name': 'White'
+    'name': 'أبيض',
   },
   {
     'imagePath': 'assets/colors/cyan.png',
-    'name': 'Cyan'
-  }
+    'name': 'سماوي',
+  },
 ];
 
-//countries list 
+//countries list
 const countriesList = [
   {
     'imagePath': 'assets/countries/usa.png',
-    'name': 'United States'
+    'name': 'الولايات المتحدة',
   },
   {
     'imagePath': 'assets/countries/canada.png',
-    'name': 'Canada'
+    'name': 'كندا',
   },
   {
     'imagePath': 'assets/countries/uk.png',
-    'name': 'United Kingdom'
+    'name': 'المملكة المتحدة',
   },
   {
     'imagePath': 'assets/countries/france.png',
-    'name': 'France'
+    'name': 'فرنسا',
   },
   {
     'imagePath': 'assets/countries/germany.png',
-    'name': 'Germany'
+    'name': 'ألمانيا',
   },
   {
     'imagePath': 'assets/countries/japan.png',
-    'name': 'Japan'
+    'name': 'اليابان',
   },
   {
     'imagePath': 'assets/countries/china.png',
-    'name': 'China'
+    'name': 'الصين',
   },
   {
     'imagePath': 'assets/countries/india.png',
-    'name': 'India'
+    'name': 'الهند',
   },
   {
     'imagePath': 'assets/countries/brazil.png',
-    'name': 'Brazil'
+    'name': 'البرازيل',
   },
   {
     'imagePath': 'assets/countries/australia.png',
-    'name': 'Australia'
+    'name': 'أستراليا',
   },
   {
     'imagePath': 'assets/countries/south-africa.png',
-    'name': 'South Africa'
+    'name': 'جنوب أفريقيا',
   },
   {
     'imagePath': 'assets/countries/russia.png',
-    'name': 'Russia'
-  }
+    'name': 'روسيا',
+  },
 ];
-
 
 //NUMS LIST
 const numsList = [
@@ -672,5 +623,130 @@ const vegetablesList = [
   {
     'imagePath': 'assets/vegetables/خيار.png',
     'name': 'خيار',
+  },
+];
+
+//Shapes
+List<Map<String, String>> shapesList = [
+  {
+    'name': 'الدائرة',
+    'image': 'assets/images/circle_image.png',
+  },
+  {
+    'name': 'المربع',
+    'image': 'assets/images/square_image.png',
+  },
+  {
+    'name': 'المستطيل',
+    'image': 'assets/images/rectangle_image.png',
+  },
+  {
+    'name': 'المثلث',
+    'image': 'assets/images/triangle_image.png',
+  },
+  {
+    'name': 'البيضاوي',
+    'image': 'assets/images/oval_image.png',
+  },
+  {
+    'name': 'القلب',
+    'image': 'assets/images/heart_image.png',
+  },
+  {
+    'name': 'النجمة',
+    'image': 'assets/images/star_image.png',
+  },
+  {
+    'name': 'الهلال',
+    'image': 'assets/images/crescent_image.png',
+  },
+  {
+    'name': 'العقرب',
+    'image': 'assets/images/pentagon_image.png',
+  },
+  {
+    'name': 'الدائرة الكاملة',
+    'image': 'assets/images/full_circle_image.png',
+  },
+  {
+    'name': 'المعين',
+    'image': 'assets/images/cone_image.png',
+  },
+  {
+    'name': 'الأسطوانة',
+    'image': 'assets/images/cylinder_image.png',
+  },
+];
+
+//BodyParts List
+
+List<Map<String, String>> bodyPartsList = [
+  {
+    'name': 'الرأس',
+    'image': 'assets/images/head_image.png',
+  },
+  {
+    'name': 'العين',
+    'image': 'assets/images/eye_image.png',
+  },
+  {
+    'name': 'الأذن',
+    'image': 'assets/images/ear_image.png',
+  },
+  {
+    'name': 'الأنف',
+    'image': 'assets/images/nose_image.png',
+  },
+  {
+    'name': 'الفم',
+    'image': 'assets/images/mouth_image.png',
+  },
+  {
+    'name': 'الذراع',
+    'image': 'assets/images/arm_image.png',
+  },
+  {
+    'name': 'اليد',
+    'image': 'assets/images/hand_image.png',
+  },
+  {
+    'name': 'الصدر',
+    'image': 'assets/images/chest_image.png',
+  },
+  {
+    'name': 'البطن',
+    'image': 'assets/images/stomach_image.png',
+  },
+  {
+    'name': 'الظهر',
+    'image': 'assets/images/back_image.png',
+  },
+  {
+    'name': 'الساق',
+    'image': 'assets/images/leg_image.png',
+  },
+  {
+    'name': 'القدم',
+    'image': 'assets/images/foot_image.png',
+  },
+  {
+    'name': 'الرقبة',
+    'image': 'assets/images/neck_image.png',
+  },
+  {
+    'name': 'الكتف',
+    'image': 'assets/images/shoulder_image.png',
+  },
+  {
+    'name': 'الكوع',
+    'image': 'assets/images/elbow_image.png',
+  },
+  {
+    'name': 'الركبة',
+    'image': 'assets/images/knee_image.png',
+  },
+  {
+    'name': 'الكاحل',
+    'image': 'assets/images/ankle_image.png',
   },
 ];

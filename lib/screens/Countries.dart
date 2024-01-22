@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:project_v1/constants.dart';
 
-import '../models/weekday_model.dart';
+import '../models/model_country.dart';
 
-class WeekdayModel {
+class CountryModel {
   String name, imagePath;
-  WeekdayModel({
+  CountryModel({
     required this.name,
     required this.imagePath,
   });
 }
 
-class WeekdaysScreen extends StatefulWidget {
+class CountriesScreen extends StatefulWidget {
   @override
-  _WeekdaysScreenState createState() => _WeekdaysScreenState();
+  _CountriesScreenState createState() => _CountriesScreenState();
 }
 
-class _WeekdaysScreenState extends State<WeekdaysScreen> {
+class _CountriesScreenState extends State<CountriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,19 +34,19 @@ class _WeekdaysScreenState extends State<WeekdaysScreen> {
       ),
       backgroundColor: AppColors.black,
       body: Center(
-        child: buildWeekdays(),
+        child: buildCountries(),
       ),
     );
   }
 
-  Widget buildWeekdays() {
+  Widget buildCountries() {
     return ListView.builder(
-      itemCount: weekdaysList.length,
+      itemCount: countriesList.length,
       itemBuilder: (context, index) {
-        return WeekdayModelWidget(
-          weekdayModel: WeekdayModel(
-            name: weekdaysList[index]['name'].toString(),
-            imagePath: weekdaysList[index]['imagePath'].toString(),
+        return CountryModelWidget(
+          countryModel: CountryModel(
+            name: countriesList[index]['name'].toString(),
+            imagePath: countriesList[index]['imagePath'].toString(),
           ),
         );
       },

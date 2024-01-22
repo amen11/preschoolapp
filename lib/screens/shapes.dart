@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:project_v1/constants.dart';
+import 'package:project_v1/models/model_shapes.dart'; // Import the shape model
 
-import '../models/weekday_model.dart';
-
-class WeekdayModel {
-  String name, imagePath;
-  WeekdayModel({
-    required this.name,
-    required this.imagePath,
-  });
-}
-
-class WeekdaysScreen extends StatefulWidget {
+class ShapesScreen extends StatefulWidget {
   @override
-  _WeekdaysScreenState createState() => _WeekdaysScreenState();
+  _ShapesScreenState createState() => _ShapesScreenState();
 }
 
-class _WeekdaysScreenState extends State<WeekdaysScreen> {
+class _ShapesScreenState extends State<ShapesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,19 +25,19 @@ class _WeekdaysScreenState extends State<WeekdaysScreen> {
       ),
       backgroundColor: AppColors.black,
       body: Center(
-        child: buildWeekdays(),
+        child: buildShapes(),
       ),
     );
   }
 
-  Widget buildWeekdays() {
+  Widget buildShapes() {
     return ListView.builder(
-      itemCount: weekdaysList.length,
+      itemCount: shapesList.length,
       itemBuilder: (context, index) {
-        return WeekdayModelWidget(
-          weekdayModel: WeekdayModel(
-            name: weekdaysList[index]['name'].toString(),
-            imagePath: weekdaysList[index]['imagePath'].toString(),
+        return ShapeModelWidget(
+          shapeModel: ShapeModel(
+            name: shapesList[index]['name'].toString(),
+            image: shapesList[index]['image'].toString(),
           ),
         );
       },

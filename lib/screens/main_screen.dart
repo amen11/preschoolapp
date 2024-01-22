@@ -125,7 +125,7 @@ class _MainScreenState extends State<MainScreen> {
 
   SizedBox buildCards(BuildContext context) {
     return SizedBox(
-      height: 1000,
+      height: 1200,
       child: GridView.count(
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
