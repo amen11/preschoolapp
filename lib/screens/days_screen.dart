@@ -19,6 +19,7 @@ class WeekdaysScreen extends StatefulWidget {
 class _WeekdaysScreenState extends State<WeekdaysScreen> {
   @override
   Widget build(BuildContext context) {
+    print(weekdaysList.length);
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -30,7 +31,8 @@ class _WeekdaysScreenState extends State<WeekdaysScreen> {
           },
           icon: Icon(Icons.arrow_back, color: AppColors.backGround),
         ),
-        title: Image.asset('assets/images/Logo_color.png', width: 120, height: 120),
+        title: Image.asset('assets/images/Logo_color.png',
+            width: 120, height: 120),
       ),
       backgroundColor: AppColors.black,
       body: Center(

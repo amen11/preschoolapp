@@ -158,29 +158,29 @@ const gamesRoutes = [
 
 //weekdays list
 const weekdaysList = [
-  {'imagePath': 'assets/weekdays/sunday.png', 'name': 'الأحد'},
-  {'imagePath': 'assets/weekdays/monday.png', 'name': 'الاثنين'},
-  {'imagePath': 'assets/weekdays/tuesday.png', 'name': 'الثلاثاء'},
-  {'imagePath': 'assets/weekdays/wednesday.png', 'name': 'الأربعاء'},
-  {'imagePath': 'assets/weekdays/thursday.png', 'name': 'الخميس'},
-  {'imagePath': 'assets/weekdays/friday.png', 'name': 'الجمعة'},
-  {'imagePath': 'assets/weekdays/saturday.png', 'name': 'السبت'}
+  {'imagePath': 'assets/days/sunday.png', 'name': 'الأحد'},
+  {'imagePath': 'assets/days/monday.png', 'name': 'الاثنين'},
+  {'imagePath': 'assets/days/tuesday.png', 'name': 'الثلاثاء'},
+  {'imagePath': 'assets/days/wednesday.png', 'name': 'الأربعاء'},
+  {'imagePath': 'assets/days/thursday.png', 'name': 'الخميس'},
+  {'imagePath': 'assets/days/friday.png', 'name': 'الجمعة'},
+  {'imagePath': 'assets/days/saturday.png', 'name': 'السبت'}
 ];
 
 
 //months list
 const monthsList = [
-  {'imagePath': 'assets/months/january.png', 'name': 'جانْفِي'},
-  {'imagePath': 'assets/months/february.png', 'name': 'فِيفْرِي'},
-  {'imagePath': 'assets/months/march.png', 'name': 'مارْس'},
-  {'imagePath': 'assets/months/april.png', 'name': 'أفْرِيل'},
+  {'imagePath': 'assets/months/janvier.png', 'name': 'جانْفِي'},
+  {'imagePath': 'assets/months/fevrier.png', 'name': 'فِيفْرِي'},
+  {'imagePath': 'assets/months/mars.png', 'name': 'مارْس'},
+  {'imagePath': 'assets/months/avril.png', 'name': 'أفْرِيل'},
   {'imagePath': 'assets/months/may.png', 'name': 'ماي'},
-  {'imagePath': 'assets/months/june.png', 'name': 'جْوان'},
-  {'imagePath': 'assets/months/july.png', 'name': 'جْوِيلِْية'},
-  {'imagePath': 'assets/months/august.png', 'name': 'أُوت'},
-  {'imagePath': 'assets/months/september.png', 'name': 'سِبْتُمْبر'},
-  {'imagePath': 'assets/months/october.png', 'name': 'أُكْتُوبر'},
-  {'imagePath': 'assets/months/november.png', 'name': 'نُوفُمْبر'},
+  {'imagePath': 'assets/months/juin.png', 'name': 'جْوان'},
+  {'imagePath': 'assets/months/juillet.png', 'name': 'جْوِيلِْية'},
+  {'imagePath': 'assets/months/aout.png', 'name': 'أُوت'},
+  {'imagePath': 'assets/months/septembre.png', 'name': 'سِبْتُمْبر'},
+  {'imagePath': 'assets/months/octobre.png', 'name': 'أُكْتُوبر'},
+  {'imagePath': 'assets/months/novembre.png', 'name': 'نُوفُمْبر'},
   {'imagePath': 'assets/months/december.png', 'name': 'دِيسُمْبر'}
 ];
 
@@ -246,10 +246,7 @@ const countriesList = [
     'imagePath': 'assets/countries/canada.png',
     'name': 'كندا',
   },
-  {
-    'imagePath': 'assets/countries/uk.png',
-    'name': 'المملكة المتحدة',
-  },
+  
   {
     'imagePath': 'assets/countries/france.png',
     'name': 'فرنسا',
@@ -277,10 +274,6 @@ const countriesList = [
   {
     'imagePath': 'assets/countries/australia.png',
     'name': 'أستراليا',
-  },
-  {
-    'imagePath': 'assets/countries/south-africa.png',
-    'name': 'جنوب أفريقيا',
   },
   {
     'imagePath': 'assets/countries/russia.png',

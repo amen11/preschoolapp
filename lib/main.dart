@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_v1/constants.dart';
+import 'package:project_v1/screens/Countries.dart';
 import 'package:project_v1/screens/Games/memory.dart';
 import 'package:project_v1/screens/Games/startup.dart';
 import 'package:project_v1/screens/animals_screen.dart';
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
           '/Colors':(context) => ColorsScreen(),
           '/Months':(context) => MonthsScreen(),
           '/Days':(context) => WeekdaysScreen(),
+          '/Countries' :(context) => CountriesScreen(),
           '/Games': (context) => GameScreen(),
           '/Color': (context) => ColorMatch(),
           '/Memory': (context) => Memory(),
