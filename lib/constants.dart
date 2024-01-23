@@ -103,7 +103,7 @@ const CardsList = [
     'name': 'أجزاء الجسم',
   },
   {
-    'imagePath': 'assets/body.jpg',
+    'imagePath': 'assets/shapes.png',
     'name': 'الأشكال',
   }
 ];
@@ -620,126 +620,111 @@ const vegetablesList = [
 ];
 
 //Shapes
-List<Map<String, String>> shapesList = [
+const shapesList = [
   {
     'name': 'الدائرة',
-    'image': 'assets/images/circle_image.png',
+    'image': 'assets/shapes/circle_image.jpg',
   },
   {
     'name': 'المربع',
-    'image': 'assets/images/square_image.png',
+    'image': 'assets/shapes/square_image.jpg',
   },
   {
     'name': 'المستطيل',
-    'image': 'assets/images/rectangle_image.png',
+    'image': 'assets/shapes/rectangle_image.jpg',
   },
   {
     'name': 'المثلث',
-    'image': 'assets/images/triangle_image.png',
+    'image': 'assets/shapes/triangle_image.jpg',
   },
   {
     'name': 'البيضاوي',
-    'image': 'assets/images/oval_image.png',
+    'image': 'assets/shapes/oval_image.jpg',
   },
   {
     'name': 'القلب',
-    'image': 'assets/images/heart_image.png',
+    'image': 'assets/shapes/heart_image.jpg',
   },
   {
     'name': 'النجمة',
-    'image': 'assets/images/star_image.png',
+    'image': 'assets/shapes/star_image.jpg',
   },
   {
     'name': 'الهلال',
-    'image': 'assets/images/crescent_image.png',
+    'image': 'assets/shapes/crescent_image.png',
   },
-  {
-    'name': 'العقرب',
-    'image': 'assets/images/pentagon_image.png',
-  },
-  {
-    'name': 'الدائرة الكاملة',
-    'image': 'assets/images/full_circle_image.png',
-  },
+  
+  
   {
     'name': 'المعين',
-    'image': 'assets/images/cone_image.png',
+    'image': 'assets/shapes/rhombus_image.jpg',
   },
-  {
-    'name': 'الأسطوانة',
-    'image': 'assets/images/cylinder_image.png',
-  },
+  
 ];
 
 //BodyParts List
 
-List<Map<String, String>> bodyPartsList = [
+const bodyPartsList = [
   {
     'name': 'الرأس',
-    'image': 'assets/images/head_image.png',
+    'image': 'assets/body parts/head.jpg',
   },
   {
     'name': 'العين',
-    'image': 'assets/images/eye_image.png',
+    'image': 'assets/body parts/eyes.jpg',
   },
   {
     'name': 'الأذن',
-    'image': 'assets/images/ear_image.png',
+    'image': 'assets/body parts/ear.jpg',
   },
   {
     'name': 'الأنف',
-    'image': 'assets/images/nose_image.png',
+    'image': 'assets/body parts/nose.jpg',
   },
   {
     'name': 'الفم',
-    'image': 'assets/images/mouth_image.png',
+    'image': 'assets/body parts/mouth.jpg',
   },
   {
     'name': 'الذراع',
-    'image': 'assets/images/arm_image.png',
+    'image': 'assets/body parts/arm.jpg',
   },
   {
     'name': 'اليد',
-    'image': 'assets/images/hand_image.png',
+    'image': 'assets/body parts/hand.jpg',
   },
-  {
-    'name': 'الصدر',
-    'image': 'assets/images/chest_image.png',
-  },
+  
   {
     'name': 'البطن',
-    'image': 'assets/images/stomach_image.png',
+    'image': 'assets/body parts/stomach.jpg',
   },
-  {
-    'name': 'الظهر',
-    'image': 'assets/images/back_image.png',
-  },
+  
   {
     'name': 'الساق',
-    'image': 'assets/images/leg_image.png',
+    'image': 'assets/body parts/leg.jpg',
   },
   {
     'name': 'القدم',
-    'image': 'assets/images/foot_image.png',
+    'image': 'assets/body parts/foot.jpg',
   },
   {
     'name': 'الرقبة',
-    'image': 'assets/images/neck_image.png',
+    'image': 'assets/body parts/neck.jpg',
   },
   {
     'name': 'الكتف',
-    'image': 'assets/images/shoulder_image.png',
+    'image': 'assets/body parts/shoulder.jpg',
   },
   {
     'name': 'الكوع',
-    'image': 'assets/images/elbow_image.png',
+    'image': 'assets/body parts/elbow.jpg',
   },
   {
     'name': 'الركبة',
-    'image': 'assets/images/knee_image.png',
+    'image': 'assets/body parts/knee.jpg',
   },
   {
     'name': 'الكاحل',
-    'image': 'assets/images/ankle_image.png',
+    'image': 'assets/body parts/ankle.jpg',
   },
 ];

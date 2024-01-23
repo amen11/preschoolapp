@@ -37,7 +37,7 @@ class _BodyPartsScreenState extends State<BodyPartsScreen> {
         return BodyPartModelWidget(
           bodyPartModel: BodyPartModel(
             name: bodyPartsList[index]['name'].toString(),
-            image: bodyPartsList[index]['imagePath'].toString(),
+            image: bodyPartsList[index]['image'].toString(),
           ),
         );
       },

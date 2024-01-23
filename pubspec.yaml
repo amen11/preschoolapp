@@ -86,9 +86,11 @@ flutter:
   - assets/vegetables/
   - assets/fruits/
   - assets/days/
-  - assets/months/
   - assets/countries/
   - assets/colors/
+  - assets/months/
+  - assets/shapes/
+  - assets/body parts/
 
 
 

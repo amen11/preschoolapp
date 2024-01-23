@@ -46,7 +46,7 @@ class _MonthsScreenState extends State<MonthsScreen> {
         return MonthModelWidget(
           monthModel: MonthModel(
             name: monthsList[index]['name'].toString(),
-            image: monthsList[index]['image'].toString(),
+            image: monthsList[index]['imagePath'].toString(),
           ),
         );
       },
